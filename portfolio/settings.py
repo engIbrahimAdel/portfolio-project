@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jobs.apps.JobsConfig',#this name jobs.config from apps in jobs
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+#MAKING DIRECTOY FOR MEDIA WHERE TO BE SAVED,
+#AND TAKE THE COMMON WRITING SHAPE FROM LINE16 RECOMMENDED
+
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+#add url to access this media
+MEDIA_URL='/media/'
